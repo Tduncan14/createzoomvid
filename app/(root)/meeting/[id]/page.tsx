@@ -3,7 +3,12 @@ import React from 'react'
 const Meeting = ({ params }: { params: { id: string } }) => {
     return (
         <div>
-            Meeting Room:#{params.id}
+            <section className="flex size-full flex-col gap-10 text-white">
+                <h1 className="text-3xl font-bold">
+                    Meeting Room{params.id}
+                </h1>
+
+            </section>
         </div>
     )
 }
