@@ -13,7 +13,8 @@ const MeetingTypeList = () => {
 
 
 
-    console.log(meetingState, 'stater')
+    console.log(meetingState, 'state ')
+
     const createMeeting = () => {
 
     }
