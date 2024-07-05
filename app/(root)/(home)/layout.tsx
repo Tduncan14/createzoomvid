@@ -9,7 +9,7 @@ const Home = ({ children }: { children: ReactNode }) => {
 
     return (
         <main className="relative">
-            <Navbar />
+            {/* <Navbar /> */}
 
 
             <div className="flex">
