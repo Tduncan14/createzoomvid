@@ -2,8 +2,11 @@
 
 import { DeviceSettings, useCall, VideoPreview } from '@stream-io/video-react-sdk'
 import React, { useState, useEffect } from 'react'
+import { Button } from './button'
 
-const MeetingSetup = () => {
+
+
+const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (value: boolean) => void }) => {
     const [isMicCamToggledOn, setIsMicCamToggledon] = useState(false)
 
 
@@ -50,7 +53,16 @@ const MeetingSetup = () => {
                 </label>
 
                 <DeviceSettings />
+
             </div>
+
+
+            <Button onClick={() => {
+                call.join()
+                setIsSetupComplete(true)
+            }} className="rounded-md bg-green-500 px-4 py-2.5">
+                Join Meeting
+            </Button>
         </div>
     )
 }
