@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { Toaster } from "@/components/ui/toaster"
+import '@stream-io/video-react-sdk/dist/css/styles.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
