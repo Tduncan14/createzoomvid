@@ -1,4 +1,4 @@
-import { CallControls, CallParticipantsList, CallStatsButton, PaginatedGridLayout, SpeakerLayout } from '@stream-io/video-react-sdk'
+import { CallControls, CallParticipantsList, CallStatsButton, PaginatedGridLayout, SpeakerLayout, useCallStateHooks, CallingState } from '@stream-io/video-react-sdk'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
@@ -12,6 +12,7 @@ import {
 import { LayoutList, Users } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import EndCallButton from './EndCallButton'
+import Loader from '../Loader'
 
 
 const MeetingRoom = () => {
@@ -22,9 +23,12 @@ const MeetingRoom = () => {
     type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right'
 
     const [layout, setLayout] = useState('speaker-left')
-
     const [showParticipants, setShowParticipants] = useState(false)
 
+    const { useCallCallingState } = useCallStateHooks()
+    const callingState = useCallCallingState()
+
+    if (callingState !== CallingState.JOINED) return <Loader />
 
 
     const CallLayout = () => {
