@@ -12,7 +12,7 @@ function Navbar() {
                 <p className="text-[26px] font-extrabold max-sm:hidden text-white">Language Call</p>
             </Link>
 
-            <div className="flex-between gap-5">
+            <div className="flex  gap-5">
                 {/* clerk - user management */}
                 <SignedIn>
                     <UserButton />
