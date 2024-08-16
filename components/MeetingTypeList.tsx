@@ -134,7 +134,11 @@ const MeetingTypeList = () => {
                                 selected={values.dateTime}
                                 onChange={(date) => setValues({ ...values, dateTime: date! })}
                                 showTimeSelect
-                                dateFormat="Pp" />
+                                dateFormat="MMMM d, yyyy h:mm aa"
+                                timeFormat="HH:mm"
+                                timeIntervals={15}
+                                timeCaption='="time'
+                                className="w-full rounded bg-dark-2 p-2 focus:outline-none" />
 
                         </div>
                     </Meetingmodal>
