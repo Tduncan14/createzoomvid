@@ -25,7 +25,7 @@ const Mobilenav = () => {
 
 
     return (
-        <section className="w-full    max-w-[264px] text-white">
+        <section className="w-full flex justify-between    max-w-[264px] text-white">
             <Sheet>
                 <SheetTrigger asChild>
                     <Image src='/icons/hamburger.svg' width={36} height={36} alt="hamburger" className='cursor-pointer' />
